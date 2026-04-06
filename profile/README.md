@@ -10,85 +10,81 @@
 
 ---
 
-We build the foundation layer for AI-powered healthcare — the infrastructure that lets clinical AI agents discover each other, communicate securely, and operate under full governance.
+Healthcare has an integration problem that AI is about to make worse. Thousands of clinical AI agents are being built in isolation — with no standard way to discover, trust, or coordinate with each other. We fix that.
 
-Three products. One platform. Zero patient data in the registry.
-
----
-
-### 🚄 BulletTrain — Health Information Exchange
-
-160+ microservice orchestration platform. Speaks FHIR R4, HL7v2, CDA, X12, DICOM natively. Maps SNOMED CT, ICD-10, ICD-11, LOINC, CPT, RxNorm, and dm+d in real time. Not an integration engine — a governed orchestration platform where clinical workflows, AI agents, and health data converge through a single HIE layer. Free to install and deploy on your own infrastructure — like Linux for healthcare interoperability. `Free · Self-hosted`
-
-### 🌐 GHARRA — Global Agent Registry & Routing Authority
-
-Federated, zero-trust registry for healthcare AI agents. The DNS for clinical AI — agents register capabilities, callers discover them across organisational and national boundaries. Zero patient data by design. Emergency care is never blocked. 9-rule ABAC policy engine with three-tier federation (Root → Sovereign → Organisational). Hosted and operated by Symphonix Health — subscribers register agents, consume discovery, and pay for agent usage. Revenue funds continued innovation on the agent platform. `Hosted · Pay-per-use`
-
-### 🔗 Nexus A2A — Agent-to-Agent Protocol
-
-Secure protocol for clinical AI agents to delegate tasks to each other. JSON-RPC 2.0 with 13-point route admission validation. 25 reference agents across 5 clinical workflow domains. 7,000+ test scenarios with 100% pass rate. Every interaction is governed, audited, and consent-verified. `Protocol`
+**BulletTrain** is the orchestration platform. **GHARRA** is the agent registry. **Nexus A2A** is the communication protocol. Together, they let clinical AI agents find each other, prove they're trustworthy, and collaborate on patient care — all under full governance.
 
 ---
 
-## How they work together
+## The model
+
+**BulletTrain is free.** Install it on your own infrastructure — like Linux for healthcare interoperability. 160+ microservices, native FHIR R4, HL7v2, CDA, X12, DICOM support, real-time terminology mapping across SNOMED CT, ICD-10, ICD-11, LOINC, CPT, RxNorm, and dm+d.
+
+**GHARRA is hosted.** The agent registry is operated by Symphonix Health as a managed service. Subscribers register their agents, discover others, and pay for agent usage. Revenue funds continued innovation on the platform — new agents, new capabilities, better governance tooling.
+
+**The integration bridge connects them.** Every BulletTrain installation includes a bridge to GHARRA that exposes subscribed agents to customers. When a hospital deploys BulletTrain, it immediately gains access to the full agent ecosystem — triage, imaging, pharmacy, discharge, consent, compliance — orchestrated through governed clinical workflows. The bridge is why BulletTrain can be free: it's the on-ramp to the agent economy.
+
+**Nexus A2A is the protocol underneath.** JSON-RPC 2.0 with 13-point route admission validation. 25 reference agents. 7,000+ test scenarios. 100% pass rate. Every interaction is governed, audited, and consent-verified.
+
+---
+
+## Architecture
 
 ```
-                 ┌─────────────────────────────────────────┐
-                 │            BulletTrain (HIE)             │
-                 │   Orchestration · Routing · Terminology  │
-                 └──────────┬──────────────┬───────────────┘
-                            │              │
-                 ┌──────────▼──────┐  ┌────▼──────────────┐
-                 │     GHARRA      │  │    Nexus A2A       │
-                 │  Discovery +    │  │  Secure agent-to-  │
-                 │  Trust Bundles  │  │  agent transport   │
-                 └──────────┬──────┘  └────┬──────────────┘
-                            │              │
-           ┌────────────────┼──────────────┼────────────────┐
-           │                │              │                │
-      ┌────▼────┐   ┌──────▼──┐   ┌───────▼──┐   ┌────────▼──┐
-      │ Triage  │   │ Imaging │   │ Pharmacy │   │ Discharge │
-      │  Agent  │   │  Agent  │   │  Agent   │   │   Agent   │
-      └─────────┘   └─────────┘   └──────────┘   └───────────┘
+     ┌──────────────────────────────────────────────┐
+     │             BulletTrain (HIE)                 │
+     │    Orchestration · Routing · Terminology      │
+     │         Free · Self-hosted · 160+ μs          │
+     └──────────────────┬───────────────────────────┘
+                        │
+              Integration Bridge
+                        │
+     ┌──────────────────▼───────────────────────────┐
+     │              GHARRA Registry                  │
+     │    Discovery · Trust · Federation · Billing   │
+     │        Hosted · Pay-per-use · Managed         │
+     └──────────┬───────────────────┬───────────────┘
+                │                   │
+     ┌──────────▼──────┐   ┌───────▼───────────────┐
+     │   Nexus A2A     │   │   Nexus A2A           │
+     │   Agent ←→ Agent│   │   Agent ←→ Agent      │
+     └──────────┬──────┘   └───────┬───────────────┘
+                │                   │
+     ┌────▼────┐ ┌──────▼──┐ ┌─────▼────┐ ┌────────▼──┐
+     │ Triage  │ │ Imaging │ │ Pharmacy │ │ Discharge │
+     │  Agent  │ │  Agent  │ │  Agent   │ │   Agent   │
+     └─────────┘ └─────────┘ └──────────┘ └───────────┘
 ```
-
-**BulletTrain** decides which agent to call. **GHARRA** resolves agents and provides trust bundles. **Nexus A2A** validates trust and delivers the call. Each step is governed, consent-gated, and audit-trailed.
-
-An **integration bridge** connects BulletTrain to GHARRA, exposing subscribed agents to customers and allowing BulletTrain to orchestrate clinical workflows across the full agent registry.
 
 ---
 
-## Design principles
+## Why it works
 
-| Principle | What it means |
+| | |
 |---|---|
 | **Zero patient data in the registry** | GHARRA never stores or proxies PHI. Three-layer detection blocks it at the gateway. |
 | **Emergency care is never blocked** | Break-glass override bypasses all gates except authentication. Not by policy. Not by billing. |
-| **Governed by design** | Every agent interaction passes 13-point admission control — identity, trust, consent, jurisdiction, and compliance. |
+| **13-point admission control** | Every agent-to-agent request passes identity, trust, consent, jurisdiction, and governance checks. |
 | **Built on OpenHIE** | WHO-endorsed Health Information Exchange architecture, extended for AI agent orchestration. |
-| **BulletTrain is free to deploy** | Install on your own infrastructure at no cost — like Linux for healthcare interoperability. |
-| **GHARRA is a managed service** | Agent discovery, trust, and usage are hosted by Symphonix Health. An integration bridge exposes subscribed agents to BulletTrain customers — we handle federation and governance. |
+| **Free platform, paid agents** | BulletTrain adoption drives the network. The integration bridge connects every installation to GHARRA's agent ecosystem. More hospitals = more agents = more value for everyone. |
 
 ---
 
 ## Who this is for
 
-- **Health system CIOs/CTOs** evaluating AI-native infrastructure
-- **Enterprise architects** designing interoperability for clinical AI
-- **AI engineers** building healthcare agents that need governed communication
-- **Digital health startups** looking for standards-based agent discovery and routing
-- **National health programmes** deploying AI-native infrastructure at scale
+- **Health system CIOs/CTOs** — deploy BulletTrain for free, subscribe to agents as you need them
+- **Enterprise architects** — standards-based interoperability with governed AI agent orchestration
+- **AI engineers** — build agents that plug into a global discovery and trust network
+- **Digital health startups** — reach every BulletTrain deployment through GHARRA
+- **National health programmes** — deploy AI-native infrastructure at scale with federated governance
 
 ---
 
 ## Get started
 
-Visit **[symphonix-health.com](https://symphonix-health.com)** to explore the platform, read technical documentation, and book a walkthrough.
+Visit **[symphonix-health.com](https://symphonix-health.com)** to explore the platform, read the documentation, and book a walkthrough.
 
-- 📖 [Documentation](https://symphonix-health.com/pages/developers.html) — Technical specs, API reference, architecture guides
-- 🏥 [Clinical Governance](https://symphonix-health.com/pages/clinical-governance.html) — How we govern AI in clinical settings
-- 🔒 [Trust & Governance](https://symphonix-health.com/pages/trust-governance.html) — Security architecture and compliance
-- 📅 [Book a Walkthrough](https://symphonix-health.com/pages/schedule-demo.html) — See the platform in action
+📖 [Documentation](https://symphonix-health.com/pages/developers.html) · 🏥 [Clinical Governance](https://symphonix-health.com/pages/clinical-governance.html) · 🔒 [Trust & Governance](https://symphonix-health.com/pages/trust-governance.html) · 📅 [Book a Walkthrough](https://symphonix-health.com/pages/schedule-demo.html)
 
 ---
 
