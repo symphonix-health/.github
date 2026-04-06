@@ -17,94 +17,47 @@ We build the foundation layer for AI-powered healthcare — the infrastructure t
 
 Three products. One platform. Zero patient data in the registry.
 
-<br/>
+---
 
-<table>
-<tr>
-<td width="33%" valign="top">
+### 🚄 BulletTrain — Health Information Exchange
 
-### 🚄 BulletTrain
-**Health Information Exchange**
+160+ microservice orchestration platform. Speaks FHIR R4, HL7v2, CDA, X12, DICOM natively. Maps SNOMED CT, ICD-10, ICD-11, LOINC, CPT, RxNorm, and dm+d in real time. Not an integration engine — a governed orchestration platform where clinical workflows, AI agents, and health data converge through a single HIE layer.
 
-160+ microservice orchestration platform. Speaks FHIR R4, HL7v2, CDA, X12, DICOM natively. Maps SNOMED CT, ICD-10, ICD-11, LOINC, CPT, RxNorm, and dm+d in real time.
+### 🌐 GHARRA — Global Agent Registry & Routing Authority
 
-Not an integration engine. A governed orchestration platform where clinical workflows, AI agents, and health data converge.
+Federated, zero-trust registry for healthcare AI agents. The DNS for clinical AI — agents register capabilities, callers discover them across organisational and national boundaries. Zero patient data by design. Emergency care is never blocked. 9-rule ABAC policy engine with three-tier federation (Root → Sovereign → Organisational).
 
-`Enterprise`
+### 🔗 Nexus A2A — Agent-to-Agent Protocol
 
-</td>
-<td width="33%" valign="top">
+Open protocol for clinical AI agents to delegate tasks securely. JSON-RPC 2.0 with 13-point route admission validation. 25 reference agents across 5 clinical workflow domains. 7,000+ test scenarios with 100% pass rate. Every interaction is governed, audited, and consent-verified.
 
-### 🌐 [GHARRA](https://github.com/Symphonix-Health/global-agent-registry)
-**Global Agent Registry**
-
-Federated, zero-trust registry for healthcare AI agents. The DNS for clinical AI — agents register capabilities, callers discover them across organisational and national boundaries.
-
-Zero patient data by design. Emergency care is never blocked.
-
-`Apache 2.0` · `Python`
-
-</td>
-<td width="33%" valign="top">
-
-### 🔗 [Nexus A2A](https://github.com/Symphonix-Health/nexus-a2a-protocol)
-**Agent-to-Agent Protocol**
-
-Open protocol for clinical AI agents to delegate tasks securely. JSON-RPC 2.0 with 13-point route admission validation. 25 reference agents. 7,000+ test scenarios. 100% pass rate.
-
-Every interaction is governed, audited, and consent-verified.
-
-`Apache 2.0` · `Python`
-
-</td>
-</tr>
-</table>
-
-<br/>
+---
 
 ## How they work together
 
 ```
-                    ┌─────────────────────────────────────────┐
-                    │            BulletTrain (HIE)             │
-                    │   Orchestration · Routing · Terminology  │
-                    └──────────┬──────────────┬───────────────┘
-                               │              │
-                    ┌──────────▼──────┐  ┌────▼──────────────┐
-                    │     GHARRA      │  │    Nexus A2A       │
-                    │  Discovery +    │  │  Secure agent-to-  │
-                    │  Trust Bundles  │  │  agent transport   │
-                    └──────────┬──────┘  └────┬──────────────┘
-                               │              │
-              ┌────────────────┼──────────────┼────────────────┐
-              │                │              │                │
-         ┌────▼────┐   ┌──────▼──┐   ┌───────▼──┐   ┌────────▼──┐
-         │ Triage  │   │ Imaging │   │ Pharmacy │   │ Discharge │
-         │  Agent  │   │  Agent  │   │  Agent   │   │   Agent   │
-         └─────────┘   └─────────┘   └──────────┘   └───────────┘
+                 ┌─────────────────────────────────────────┐
+                 │            BulletTrain (HIE)             │
+                 │   Orchestration · Routing · Terminology  │
+                 └──────────┬──────────────┬───────────────┘
+                            │              │
+                 ┌──────────▼──────┐  ┌────▼──────────────┐
+                 │     GHARRA      │  │    Nexus A2A       │
+                 │  Discovery +    │  │  Secure agent-to-  │
+                 │  Trust Bundles  │  │  agent transport   │
+                 └──────────┬──────┘  └────┬──────────────┘
+                            │              │
+           ┌────────────────┼──────────────┼────────────────┐
+           │                │              │                │
+      ┌────▼────┐   ┌──────▼──┐   ┌───────▼──┐   ┌────────▼──┐
+      │ Triage  │   │ Imaging │   │ Pharmacy │   │ Discharge │
+      │  Agent  │   │  Agent  │   │  Agent   │   │   Agent   │
+      └─────────┘   └─────────┘   └──────────┘   └───────────┘
 ```
 
 **BulletTrain** decides which agent to call. **GHARRA** resolves agents and provides trust bundles. **Nexus A2A** validates trust and delivers the call. Each step is governed, consent-gated, and audit-trailed.
 
-<br/>
-
-## Quick start
-
-```bash
-# GHARRA — Agent Discovery
-git clone https://github.com/Symphonix-Health/global-agent-registry.git
-cd global-agent-registry && pip install -e ".[dev]"
-python -m gharra.api.main
-curl http://localhost:8400/v1/discover?capability=triage
-
-# Nexus A2A — Agent Communication
-git clone https://github.com/Symphonix-Health/nexus-a2a-protocol.git
-cd nexus-a2a-protocol && pip install -e ".[dev]"
-python tools/launch_all_agents.py --with-gateway
-python tools/helixcare_scenarios.py --run chest_pain_cardiac
-```
-
-<br/>
+---
 
 ## Design principles
 
@@ -112,11 +65,11 @@ python tools/helixcare_scenarios.py --run chest_pain_cardiac
 |---|---|
 | **Zero patient data in the registry** | GHARRA never stores or proxies PHI. Three-layer detection blocks it at the gateway. |
 | **Emergency care is never blocked** | Break-glass override bypasses all gates except authentication. Not by policy. Not by billing. |
-| **Open where it matters** | Discovery (GHARRA) and communication (Nexus) are Apache 2.0. The connectivity layer should be a public good. |
+| **Open where it matters** | Discovery and communication protocols are Apache 2.0. The connectivity layer should be a public good. |
 | **13-point admission control** | Every agent-to-agent request passes identity, trust, consent, jurisdiction, and governance checks. |
 | **Built on OpenHIE** | WHO-endorsed Health Information Exchange architecture, extended for AI agent orchestration. |
 
-<br/>
+---
 
 ## Who this is for
 
@@ -126,7 +79,18 @@ python tools/helixcare_scenarios.py --run chest_pain_cardiac
 - **Digital health startups** looking for open standards to build on
 - **National health programmes** deploying AI-native infrastructure at scale
 
-<br/>
+---
+
+## Get started
+
+Visit **[symphonix-health.com](https://symphonix-health.com)** to explore the platform, read technical documentation, and book a walkthrough.
+
+- 📖 [Documentation](https://symphonix-health.com/pages/developers.html) — Technical specs, API reference, architecture guides
+- 🏥 [Clinical Governance](https://symphonix-health.com/pages/clinical-governance.html) — How we govern AI in clinical settings
+- 🔒 [Trust & Governance](https://symphonix-health.com/pages/trust-governance.html) — Security architecture and compliance
+- 📅 [Book a Walkthrough](https://symphonix-health.com/pages/schedule-demo.html) — See the platform in action
+
+---
 
 <div align="center">
   <sub>Dublin, Ireland · <a href="https://symphonix-health.com">symphonix-health.com</a> · <a href="mailto:info@symphonix-health.com">info@symphonix-health.com</a></sub>
