@@ -22,7 +22,7 @@ Three products. One platform. Zero patient data in the registry.
 
 ### 🌐 GHARRA — Global Agent Registry & Routing Authority
 
-Federated, zero-trust registry for healthcare AI agents. The DNS for clinical AI — agents register capabilities, callers discover them across organisational and national boundaries. Zero patient data by design. Emergency care is never blocked. 9-rule ABAC policy engine with three-tier federation (Root → Sovereign → Organisational). Hosted and operated by Symphonix Health — subscribers register agents and consume discovery through the managed platform. `Hosted · Pay-per-use`
+Federated, zero-trust registry for healthcare AI agents. The DNS for clinical AI — agents register capabilities, callers discover them across organisational and national boundaries. Zero patient data by design. Emergency care is never blocked. 9-rule ABAC policy engine with three-tier federation (Root → Sovereign → Organisational). Hosted and operated by Symphonix Health — subscribers register agents, consume discovery, and pay for agent usage. Revenue funds continued innovation on the agent platform. `Hosted · Pay-per-use`
 
 ### 🔗 Nexus A2A — Agent-to-Agent Protocol
 
@@ -54,6 +54,8 @@ Secure protocol for clinical AI agents to delegate tasks to each other. JSON-RPC
 
 **BulletTrain** decides which agent to call. **GHARRA** resolves agents and provides trust bundles. **Nexus A2A** validates trust and delivers the call. Each step is governed, consent-gated, and audit-trailed.
 
+An **integration bridge** connects BulletTrain to GHARRA, exposing subscribed agents to customers and allowing BulletTrain to orchestrate clinical workflows across the full agent registry.
+
 ---
 
 ## Design principles
@@ -65,7 +67,7 @@ Secure protocol for clinical AI agents to delegate tasks to each other. JSON-RPC
 | **Governed by design** | Every agent interaction passes 13-point admission control — identity, trust, consent, jurisdiction, and compliance. |
 | **Built on OpenHIE** | WHO-endorsed Health Information Exchange architecture, extended for AI agent orchestration. |
 | **BulletTrain is free to deploy** | Install on your own infrastructure at no cost — like Linux for healthcare interoperability. |
-| **GHARRA is a managed service** | Agent discovery and trust are hosted by Symphonix Health. Subscribers register agents and consume routing — we handle federation and governance. |
+| **GHARRA is a managed service** | Agent discovery, trust, and usage are hosted by Symphonix Health. An integration bridge exposes subscribed agents to BulletTrain customers — we handle federation and governance. |
 
 ---
 
