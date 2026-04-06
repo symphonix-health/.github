@@ -1,14 +1,11 @@
 <div align="center">
-  <br/>
-  <h1>Symphonix Health</h1>
-  <strong>Intelligent Healthcare Infrastructure</strong>
-  <br/><br/>
 
-  [![Website](https://img.shields.io/badge/Website-symphonix--health.com-6366F1?style=for-the-badge)](https://symphonix-health.com)
-  [![License](https://img.shields.io/badge/License-Apache_2.0-orange?style=for-the-badge)](https://opensource.org/licenses/Apache-2.0)
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-Symphonix_Health-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/company/symphonix-health)
+# Symphonix Health
+**Intelligent Healthcare Infrastructure**
 
-  <br/>
+[![Website](https://img.shields.io/badge/Website-symphonix--health.com-6366F1?style=for-the-badge)](https://symphonix-health.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Symphonix_Health-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/company/symphonix-health)
+
 </div>
 
 ---
@@ -21,15 +18,15 @@ Three products. One platform. Zero patient data in the registry.
 
 ### 🚄 BulletTrain — Health Information Exchange
 
-160+ microservice orchestration platform. Speaks FHIR R4, HL7v2, CDA, X12, DICOM natively. Maps SNOMED CT, ICD-10, ICD-11, LOINC, CPT, RxNorm, and dm+d in real time. Not an integration engine — a governed orchestration platform where clinical workflows, AI agents, and health data converge through a single HIE layer.
+160+ microservice orchestration platform. Speaks FHIR R4, HL7v2, CDA, X12, DICOM natively. Maps SNOMED CT, ICD-10, ICD-11, LOINC, CPT, RxNorm, and dm+d in real time. Not an integration engine — a governed orchestration platform where clinical workflows, AI agents, and health data converge through a single HIE layer. Free to install and deploy on your own infrastructure — like Linux for healthcare interoperability. `Free · Self-hosted`
 
 ### 🌐 GHARRA — Global Agent Registry & Routing Authority
 
-Federated, zero-trust registry for healthcare AI agents. The DNS for clinical AI — agents register capabilities, callers discover them across organisational and national boundaries. Zero patient data by design. Emergency care is never blocked. 9-rule ABAC policy engine with three-tier federation (Root → Sovereign → Organisational).
+Federated, zero-trust registry for healthcare AI agents. The DNS for clinical AI — agents register capabilities, callers discover them across organisational and national boundaries. Zero patient data by design. Emergency care is never blocked. 9-rule ABAC policy engine with three-tier federation (Root → Sovereign → Organisational). Hosted and operated by Symphonix Health — subscribers register agents and consume discovery through the managed platform. `Hosted · Pay-per-use`
 
 ### 🔗 Nexus A2A — Agent-to-Agent Protocol
 
-Open protocol for clinical AI agents to delegate tasks securely. JSON-RPC 2.0 with 13-point route admission validation. 25 reference agents across 5 clinical workflow domains. 7,000+ test scenarios with 100% pass rate. Every interaction is governed, audited, and consent-verified.
+Secure protocol for clinical AI agents to delegate tasks to each other. JSON-RPC 2.0 with 13-point route admission validation. 25 reference agents across 5 clinical workflow domains. 7,000+ test scenarios with 100% pass rate. Every interaction is governed, audited, and consent-verified. `Protocol`
 
 ---
 
@@ -65,9 +62,10 @@ Open protocol for clinical AI agents to delegate tasks securely. JSON-RPC 2.0 wi
 |---|---|
 | **Zero patient data in the registry** | GHARRA never stores or proxies PHI. Three-layer detection blocks it at the gateway. |
 | **Emergency care is never blocked** | Break-glass override bypasses all gates except authentication. Not by policy. Not by billing. |
-| **Open where it matters** | Discovery and communication protocols are Apache 2.0. The connectivity layer should be a public good. |
-| **13-point admission control** | Every agent-to-agent request passes identity, trust, consent, jurisdiction, and governance checks. |
+| **Governed by design** | Every agent interaction passes 13-point admission control — identity, trust, consent, jurisdiction, and compliance. |
 | **Built on OpenHIE** | WHO-endorsed Health Information Exchange architecture, extended for AI agent orchestration. |
+| **BulletTrain is free to deploy** | Install on your own infrastructure at no cost — like Linux for healthcare interoperability. |
+| **GHARRA is a managed service** | Agent discovery and trust are hosted by Symphonix Health. Subscribers register agents and consume routing — we handle federation and governance. |
 
 ---
 
@@ -76,7 +74,7 @@ Open protocol for clinical AI agents to delegate tasks securely. JSON-RPC 2.0 wi
 - **Health system CIOs/CTOs** evaluating AI-native infrastructure
 - **Enterprise architects** designing interoperability for clinical AI
 - **AI engineers** building healthcare agents that need governed communication
-- **Digital health startups** looking for open standards to build on
+- **Digital health startups** looking for standards-based agent discovery and routing
 - **National health programmes** deploying AI-native infrastructure at scale
 
 ---
