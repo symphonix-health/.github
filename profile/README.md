@@ -5,8 +5,7 @@
   <br />
   Move clinical and AI data safely, reliably, and at national scale.
   <br /><br />
-  <a href="https://symphonix-health.github.io/docs/system-catalogue"><img alt="System catalogue" src="https://img.shields.io/badge/catalogue-51_repos-14919B?style=flat-square" /></a>
-  <a href="https://github.com/symphonix-health/design-system"><img alt="Design system" src="https://img.shields.io/badge/design_system-dark_first-6366F1?style=flat-square" /></a>
+  <a href="https://symphonix-health.github.io/docs/system-catalogue"><img alt="System catalogue" src="https://img.shields.io/badge/catalogue-43_repos-14919B?style=flat-square" /></a>
   <img alt="Evidence rule" src="https://img.shields.io/badge/evidence-repo_local_proof_required-4F46E5?style=flat-square" />
 </div>
 
@@ -18,7 +17,7 @@
 
 ## Platform
 
-Symphonix Health is the orchestration layer for health systems deploying AI. The current public GitHub map contains 51 non-forked repositories: platform spine, clinical sibling systems, agent and assurance tooling, public documentation, and workspace operations.
+Symphonix Health is the orchestration layer for health systems deploying AI. The current public GitHub map contains 43 catalogued non-forked repositories: platform spine, clinical sibling systems, agent and assurance tooling, public documentation, and workspace operations. Forked/imported repositories flagged by maintainers are excluded from this profile.
 
 The catalogue was verified from `Symphonix-Health` on 2026-06-19. It is an orientation index, not a readiness verdict. Use repo-local tests, CAID artefacts, seeded data, and runbooks for delivery, safety, or compliance claims.
 
@@ -39,13 +38,10 @@ The catalogue was verified from `Symphonix-Health` on 2026-06-19. It is an orien
 | Repository | Role |
 |---|---|
 | [ambulance-ems](https://github.com/symphonix-health/ambulance-ems) | Ambulance and EMS computer-aided dispatch, ePRF, and A&E handover. |
-| [analytics-bi](https://github.com/symphonix-health/analytics-bi) | Healthcare analytics, materialised-view SLAs, dashboard embedding, and k-anonymity. |
 | [appointment-system](https://github.com/symphonix-health/appointment-system) | FHIR R4 appointment, slot, and scheduling workflows. |
 | [blood-transfusion](https://github.com/symphonix-health/blood-transfusion) | Blood transfusion and blood-bank workflow surface. |
 | [cancer-pathway-tracker](https://github.com/symphonix-health/cancer-pathway-tracker) | Cancer pathway tracking, MDT coordination, staging, and treatment planning. |
-| [citizen-portal](https://github.com/symphonix-health/citizen-portal) | Citizen-facing health record access, consent, proxy grants, and break-glass notices. |
 | [clinical-pathways](https://github.com/symphonix-health/clinical-pathways) | NICE and WHO pathway personalisation and execution over Bridge SDK routes. |
-| [community-nursing](https://github.com/symphonix-health/community-nursing) | District nursing caseload, visit planning, wound care, and CSDS extracts. |
 | [epaccs](https://github.com/symphonix-health/epaccs) | Electronic palliative care coordination with ReSPECT, ADRT, DNACPR, and proxy consent. |
 | [eps](https://github.com/symphonix-health/eps) | Electronic Prescription Service clinical workflow simulator. |
 | [erp](https://github.com/symphonix-health/erp) | Healthcare enterprise ERP for GL, AP, AR, procurement, inventory, HR, and payroll. |
@@ -58,11 +54,7 @@ The catalogue was verified from `Symphonix-Health` on 2026-06-19. It is an orien
 | [maternity-system](https://github.com/symphonix-health/maternity-system) | Booking-to-discharge maternity record, CTG-linked escalation, and PMRT package creation. |
 | [mha-administration](https://github.com/symphonix-health/mha-administration) | Mental Health Act administration, detention workflows, tribunal management, and section tracking. |
 | [mortuary-and-me](https://github.com/symphonix-health/mortuary-and-me) | Medical Examiner death certification, coroner referral, mortuary custody, and donation workflows. |
-| [pacs-ris](https://github.com/symphonix-health/pacs-ris) | PACS/RIS with DICOM services, DICOMweb, reporting FSM, and critical-finding escalation. |
 | [patient360-assistant](https://github.com/symphonix-health/patient360-assistant) | Governed Patient360 assistant federating healthcare systems through the BulletTrain MCP Gateway. |
-| [pharmacy-system](https://github.com/symphonix-health/pharmacy-system) | Dispensing pharmacy workflow, controlled-drug register, BCMA checks, and FP10 claims. |
-| [picis-system](https://github.com/symphonix-health/picis-system) | Acute clinical information system for ED, ward, ICU, theatre, BCMA, and handover flows. |
-| [provider-portal](https://github.com/symphonix-health/provider-portal) | Clinician and receptionist portal with FHIR write-paths into BulletTrain. |
 | [scheduling-gateway](https://github.com/symphonix-health/scheduling-gateway) | Referral modality router between appointment, telemedicine, and asynchronous workflows. |
 | [screening-recall](https://github.com/symphonix-health/screening-recall) | Population screening recall and invitation management. |
 | [supply-chain-erp](https://github.com/symphonix-health/supply-chain-erp) | Inventory, purchasing, logistics, cold-chain breach handling, and UDI movement tracking. |
@@ -88,7 +80,6 @@ The catalogue was verified from `Symphonix-Health` on 2026-06-19. It is an orien
 | Repository | Role |
 |---|---|
 | [.github](https://github.com/symphonix-health/.github) | Organisation profile README and public GitHub landing content. |
-| [design-system](https://github.com/symphonix-health/design-system) | Brand tokens, assets, preview gallery, and clinical React UI kit. |
 | [kenya-uhc-implementation](https://github.com/symphonix-health/kenya-uhc-implementation) | Kenya SHA/SHIF UHC implementation planning and pilot evidence. |
 | [symphonix-email-action-worker](https://github.com/symphonix-health/symphonix-email-action-worker) | Cloudflare inbound email worker for structured agent actions. |
 | [symphonix-health.github.io](https://github.com/symphonix-health/symphonix-health.github.io) | Documentation site for platform, protocol, architecture, and catalogue content. |
@@ -99,7 +90,6 @@ The catalogue was verified from `Symphonix-Health` on 2026-06-19. It is an orien
 ## Documentation
 
 - [System catalogue](https://symphonix-health.github.io/docs/system-catalogue)
-- [Design system](https://github.com/symphonix-health/design-system)
 - [Nexus A2A protocol](https://github.com/symphonix-health/nexus-a2a-protocol)
 - [GHARRA global agent registry](https://github.com/symphonix-health/global-agent-registry)
 - [Documentation site](https://symphonix-health.github.io)
