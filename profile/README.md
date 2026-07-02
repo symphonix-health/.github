@@ -17,7 +17,16 @@
 
 ## Platform
 
-Symphonix Health is the orchestration layer for health systems deploying AI. The current public GitHub map contains 43 catalogued non-forked repositories: platform spine, clinical sibling systems, agent and assurance tooling, public documentation, and workspace operations. Forked/imported repositories flagged by maintainers are excluded from this profile.
+HelixCare Digital Hospital Ecosystem
+Symphonix Health develops and operates HelixCare — a governed digital hospital ecosystem connecting interoperability infrastructure, clinical applications, and AI safety assurance into one delivery model.
+
+The repositories in this organisation represent the HelixCare stack end-to-end:
+
+Core interoperability and agent orchestration (for secure exchange, protocol translation, routing, and trust)
+Clinical and operational systems (from access, diagnostics, prescribing, and emergency workflows to specialty and population-health services)
+Safety, assurance, and AI engineering (clinical safety case workflows, requirements governance, verification, and agent SDLC automation)
+Documentation, implementation, and operations support (public docs, implementation assets, tooling, and organisational infrastructure)
+For the current repository inventory, refer to the live system catalogue and organisation repository list.
 
 The catalogue was verified from `Symphonix-Health` on 2026-06-19. It is an orientation index, not a readiness verdict. Use repo-local tests, CAID artefacts, seeded data, and runbooks for delivery, safety, or compliance claims.
 
