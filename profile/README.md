@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/symphonix-health/symphonix-health.github.io/main/assets/logos/symphonix-health-logo-dark.svg" alt="Symphonix Health" width="420" />
+  <img src="https://raw.githubusercontent.com/symphonix-health/symphonix-health.github.io/master/assets/logos/symphonix-health-logo-dark.svg" alt="Symphonix Health" width="420" />
   <br />
   <strong>Governed connectivity for healthcare AI.</strong>
   <br />
@@ -11,14 +11,14 @@
 
 <p align="center">
   <a href="https://symphonix-health.github.io/docs/system-catalogue">
-    <img src="https://raw.githubusercontent.com/symphonix-health/symphonix-health.github.io/main/assets/diagrams/github-org-atlas.svg" alt="Symphonix Health GitHub system atlas" width="100%" />
+    <img src="https://raw.githubusercontent.com/symphonix-health/symphonix-health.github.io/master/assets/diagrams/github-org-atlas.svg" alt="Symphonix Health GitHub system atlas" width="100%" />
   </a>
 </p>
 
 ## Platform
 
 HelixCare Digital Hospital Ecosystem
-Symphonix Health develops and operates HelixCare — a governed digital hospital ecosystem connecting interoperability infrastructure, clinical applications, and AI safety assurance into one delivery model.
+Symphonix Health develops and operates HelixCare — a governed digital hospital ecosystem connecting interoperability infrastructure, clinical applications, and AI safety assurance into one delivery [...]
 
 The repositories in this organisation represent the HelixCare stack end-to-end:
 
@@ -28,7 +28,7 @@ Safety, assurance, and AI engineering (clinical safety case workflows, requireme
 Documentation, implementation, and operations support (public docs, implementation assets, tooling, and organisational infrastructure)
 For the current repository inventory, refer to the live system catalogue and organisation repository list.
 
-The catalogue was verified from `Symphonix-Health` on 2026-06-19. It is an orientation index, not a readiness verdict. Use repo-local tests, CAID artefacts, seeded data, and runbooks for delivery, safety, or compliance claims.
+The catalogue was verified from `Symphonix-Health` on 2026-06-19. It is an orientation index, not a readiness verdict. Use repo-local tests, CAID artefacts, seeded data, and runbooks for delivery,[...]
 
 `FHIR R4` | `HL7 v2` | `CDA` | `X12` | `DICOM` | `SNOMED CT` | `ICD-10/11` | `OpenHIE` | `GHARRA` | `Nexus A2A`
 
