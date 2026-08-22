@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/symphonix-health/symphonix-health.github.io/main/assets/logos/symphonix-health-logo-dark.svg" alt="Symphonix Health" width="420" />
+  <img src="https://raw.githubusercontent.com/symphonix-health/.github/master/profile/assets/symphonix-health-logo-dark.svg" alt="Symphonix Health" width="420" />
   <br />
   <strong>Governed connectivity for healthcare AI.</strong>
   <br />
@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://github.com/symphonix-health/symphonix-health.github.io/blob/main/docs/system-catalogue.md">
-    <img src="https://raw.githubusercontent.com/symphonix-health/symphonix-health.github.io/main/assets/diagrams/github-org-atlas.svg" alt="Symphonix Health GitHub system atlas" width="100%" />
+    <img src="https://raw.githubusercontent.com/symphonix-health/.github/master/profile/assets/github-org-atlas.svg" alt="Symphonix Health GitHub system atlas" width="100%" />
   </a>
 </p>
 
