@@ -2,7 +2,7 @@
 <title id="title">Symphonix Health GitHub system atlas</title>
 <desc id="desc">A grouped map of 64 catalogued Symphonix Health repositories, including 37 clinical sibling systems.</desc>
 <defs>
-  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#04211E"/><stop offset="0.45" stop-color="#07493F"/><stop offset="0.72" stop-color="#0B6B5C"/><stop offset="1" stop-color="#148F77"/></linearGradient>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#04211E"/><stop offset="0.4" stop-color="#085E52"/><stop offset="0.75" stop-color="#0B6F8E"/><stop offset="1" stop-color="#14569B"/></linearGradient>
   <linearGradient id="pulse" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#EF4444"/><stop offset="0.14" stop-color="#F97316"/><stop offset="0.28" stop-color="#FACC15"/><stop offset="0.42" stop-color="#22C55E"/><stop offset="0.56" stop-color="#06B6D4"/><stop offset="0.7" stop-color="#3B82F6"/><stop offset="0.84" stop-color="#6366F1"/><stop offset="1" stop-color="#A855F7"/></linearGradient>
   <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse"><path d="M64 0H0V64" fill="none" stroke="#2DD4BF" stroke-opacity="0.11" stroke-width="1"/></pattern>
 </defs>
